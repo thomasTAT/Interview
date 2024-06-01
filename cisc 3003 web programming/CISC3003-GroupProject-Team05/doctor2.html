@@ -1,0 +1,253 @@
+<?php
+
+$conn = mysqli_connect('localhost:3307','root','','contact_db') or die('connection failed');
+
+if(isset($_POST['submit'])){
+
+   $name = mysqli_real_escape_string($conn, $_POST['name']);
+   $email = mysqli_real_escape_string($conn, $_POST['email']);
+   $number = $_POST['number'];
+   $date = $_POST['date'];
+
+   $insert = mysqli_query($conn, "INSERT INTO `contact_form`(name, email, number, date) VALUES('$name','$email','$number','$date')") or die('query failed');
+
+   if($insert){
+      $message[] = 'appointment made successfully!';
+   }else{
+      $message[] = 'appointment failed';
+   }
+
+}
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CISC3003 Project Assignment-Team05</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- bootstrap cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+   <!-- header section starts  -->
+
+   <header class="header fixed-top">
+
+      <div class="container">
+
+         <div class="row align-items-center justify-content-between">
+
+            <a href="index.html" class="logo">Smile<span>.Bright</span></a>
+
+            <nav class="nav">
+               <a href="index.html">home</a>
+               
+            </nav>
+
+            <a href="index.html" class="link-btn">make appointment</a>
+
+            <div id="menu-btn" class="fas fa-bars"></div>
+
+         </div>
+
+      </div>
+
+   </header>
+
+   <!-- header section ends -->
+
+   <!-- home section starts  -->
+
+
+   <!-- home section ends -->
+
+ 
+
+
+   <!-- about section starts  -->
+
+   <section class="about" id="about">
+
+      <div class="container">
+
+         <div class="row align-items-center">
+
+            
+
+            <div class="col-md-6 content mt-40">
+               <span>Doctor Information</span>
+               <h3>Dr. Sheila</h3>
+               <p>Dr. Sheila was an accomplished dentist with eight devoted years of experience helping patients smile brighter. Though she faced initial obstacles early in her career, Dr. Sheila's ardent passion for dentistry and compassionate approach with patients soon cultivated a faithful family of regular clients and a renowned reputation for her meticulous and personalized care.</p>
+            </div>
+			<div class="col-md-6 image mt-40">
+               <img src="images/pic-2.png" class="w-100 mb-5 mb-md-0" alt="">
+            </div>
+            <div class="col-md-6 content">
+               <h3>Credentials</h3>
+               <p>Doctor of Medicine
+<br>Member of the China Medical Association Oral Medicine Specialist
+<br>Senior Member of the Chinese Association of Implant Dentistry</p>
+               </div>
+            <div class="col-md-6 content">
+               <h3>Member Associations</h3>
+               <p>China Medical Association Oral Branch
+<br>Chinese Association of Implant Dentistry
+<br>Asian Oral Health Promotion Association</p>
+            </div>
+            <div class="col-md-6 content">
+               <h3>Education</h3>
+               <p>1989 Beijing University Fourth Affiliated Hospital School of Stomatology Department of Oral Medicine
+<br>1993 Earned Doctor of Oral Medicine degree from Fudan University</p>
+            </div>
+            <div class="col-md-6 content">
+               <h3>Experience</h3>
+               <p>Beijing University Fourth Affiliated Hospital Department of Oral Medicine (Chief Physician)
+<br>PLA General Hospital Third Military Medical Center Department of Oral Surgery
+<br>Beijing Haidian District Stomatological Hospital (Deputy President)
+<br>Dongfang Hospital Department of Oral Medicine (Senior Chief Physician)
+<br>Beijing University Affiliated Stomatological Hospital (Professor)</p>
+            </div>
+         </div>
+
+      </div>
+
+   </section>
+   <!-- about section ends -->
+
+   <!---alt="doctor start"-->
+   <section class="doctor" id="doctor">
+
+      <h1 class="heading"> Doctor </h1>
+      <div class="box-container container">
+
+         <a href="doctor1.html">
+            <div class="box">
+               <img src="images/pic-1.png" alt="">
+               <p>Dr. Zion Dental is a dedicated and passionate dentist who loves helping patients achieve and maintain a lifetime of oral health, bright smiles and fresh breath. Over the course of his illustrious career, Dr. Zion has provided exceptional care to over 800 patients. He is recognized as one of the area's most trusted dentists, with a devoted network of loyal clients and new patients consistently singing his praises.</p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+               <h3>Dr. Zion</h3>
+               <span>satisfied client</span>
+            </div>
+         </a>
+
+         <a href="doctor2.html">
+            <div class="box">
+               <img src="images/pic-2.png" alt="">
+               <p>Dr. Sheila, an accomplished and dedicated dentist of eight devoted years, helped patients smile brighter. Despite initial obstacles, Sheila's ardent passion for dentistry cultivated a faithful family and renown for compassionate, meticulous care.</p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+               <h3>Dr. Sheila</h3>
+               <span>satisfied client</span>
+            </div>
+         </a>
+
+         <a href="doctor3.html">
+            <div class="box">
+               <img src="images/pic-3.png" alt="">
+               <p>Dr. Ty, a stalwart dentist of twelve fruitful years, helped clients attain radiant grins and healthy smiles. Though his career started slowly, Ty's fierce dedication to excellent dentistry cultivated a devoted following and a standing as the finest practitioner of preventative and restorative dentistry.</p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+               <h3>Dr. Ty</h3>
+               <span>satisfied client</span>
+            </div>
+         </a>
+      </div>
+
+   </section>
+   <!---alt="doctor end"-->
+
+
+   <!-- services section starts  -->
+
+
+
+   <!-- footer section starts  -->
+
+   <section class="footer" id ="contact">
+
+      <div class="box-container container">
+
+         <div class="box">
+            <i class="fas fa-phone"></i>
+            <h3>phone number</h3>
+            <p>+123-456-7890</p>
+            <p>+111-222-3333</p>
+         </div>
+
+         <div class="box">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>our address</h3>
+            <p>UM, Macau - E11-1025</p>
+         </div>
+
+         <div class="box">
+            <i class="fas fa-clock"></i>
+            <h3>opening hours</h3>
+            <p>07:00am to 10:00pm</p>
+         </div>
+
+         <div class="box">
+            <i class="fas fa-envelope"></i>
+            <h3>email address</h3>
+            <p>cisc3003project@gmail.com</p>
+            <p>team05@gmail.com</p>
+         </div>
+
+      </div>
+
+      <div class="credit"> &copy; copyright @
+         <?php echo date('Y'); ?> by <span>Smile Bright team05 </span>
+      </div>
+
+   </section>
+
+   <!-- footer section ends -->
+
+
+
+
+
+
+   <!-- custom js file link  -->
+   <script src="js/script.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

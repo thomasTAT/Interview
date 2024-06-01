@@ -1,0 +1,488 @@
+<?php
+
+$conn = mysqli_connect('localhost:3307','root','','contact_db') or die('connection failed');
+
+if(isset($_POST['submit'])){
+
+   $name = mysqli_real_escape_string($conn, $_POST['name']);
+   $email = mysqli_real_escape_string($conn, $_POST['email']);
+   $number = $_POST['number'];
+   $date = $_POST['date'];
+
+   $insert = mysqli_query($conn, "INSERT INTO `contact_form`(name, email, number, date) VALUES('$name','$email','$number','$date')") or die('query failed');
+
+   if($insert){
+      $message[] = 'appointment made successfully!';
+   }else{
+      $message[] = 'appointment failed';
+   }
+
+}
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Complete Responsive Dentist Website Design Tutorial</title>
+
+   <!-- 導入 css -->
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+   <!-- boaststrap 讓header 置頂 -->
+   <header class="header fixed-top">
+   
+      <!-- bootstrap container 讓 block 網頁視窗中居中, 並且響應式-->
+      <div class="container">
+
+      <!-- 弄一個bootstrap row，垂直居中，内的项目之间创建最大间距-->
+         <div class="row align-items-center justify-content-between">
+
+            <a href="#home" class="logo">Smile<span>.Bright</span></a>
+
+            <nav class="nav">
+               <a href="#home">home</a>
+               <a href="#about">about</a>
+               <a href="#doctor">doctor & services</a>
+               <a href="#reviews">reviews</a>
+               <a href="#new">news</a>
+               <a href="#contact">contact</a>
+            </nav>
+
+            <a href="#home" class="link-btn">make appointment</a>
+
+            <!-- Font Awesome  圖標 -->
+            <div id="menu-btn" class="fas fa-bars"></div>
+
+         </div>
+
+      </div>
+
+   </header>
+
+   <!-- home 封面 section  -->
+   <section class="home" id="home">
+
+      <div class="container">
+
+
+         <div class="row align-items-center">
+
+            <div class="content text-md-left">
+               <h3>Brighten your smile with confidence</h3>
+               <p>Smile.Bright is a dental company that is dedicated to helping you achieve a beautiful and healthy smile. </p>
+
+
+               <div class="form" id="form">
+
+
+                  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                     <?php 
+            if(isset($message)){
+            foreach($message as $message){
+               echo '<p class="message">'.$message.'</p>';
+            }
+            }
+               ?>
+                     <span>your name :</span>
+                     <input type="text" name="name" placeholder="enter your name" class="box" required>
+                     <span>your email :</span>
+                     <input type="email" name="email" placeholder="enter your email" class="box" required>
+                     <span>your number :</span>
+                     <input type="number" name="number" placeholder="enter your number" class="box" required>
+                     <span>appointment date :</span>
+                     <input type="datetime-local" name="date" class="box" required>
+                     <input type="submit" value="make appointment" name="submit" class="link-btn">
+                  </form>
+
+               </div>
+
+               <!-- contact section ends -->
+            </div>
+         </div>
+      </div>
+
+   </section>
+
+   <!-- home section ends -->
+
+   <section class="recommendation" id="recommendation">
+
+      <div class="container">
+
+         
+         <div class="row align-items-center">
+
+            <div class="col-md-12 image">
+               <h1 class="heading">Recommendation</h1>
+               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <img src="images/recommendation1.jpg" class="d-block w-100" alt="...">
+                     </div>
+                     <div class="carousel-item">
+                        <img src="images/recommendation2.jpg" class="d-block w-100" alt="...">
+                     </div>
+                     <div class="carousel-item">
+                        <img src="images/recommendation3.jpg" class="d-block w-100" alt="...">
+                     </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                  </a>
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+
+   </section>
+
+
+   <!-- about section starts  -->
+
+   <section class="about" id="about">
+
+      <div class="container">
+
+         <div class="row align-items-center">
+
+            <div class="col-md-6 image">
+               <img src="images/about-img.jpg" class="w-100 mb-5 mb-md-0" alt="">
+            </div>
+
+            <div class="col-md-6 content">
+               <span>about us</span>
+               <h3>True Healthcare For Your Family</h3>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cupiditate vero in provident
+                  ducimus. Totam quas labore mollitia cum nisi, sint, expedita rem error ipsa, nesciunt ab provident.
+                  Aperiam, officiis!</p>
+               <a href="#home" class="link-btn">make appointment</a>
+            </div>
+
+         </div>
+
+      </div>
+
+   </section>
+   <!-- about section ends -->
+
+   <!---alt="doctor start"-->
+   <section class="doctor" id="doctor">
+
+      <h1 class="heading"> Doctor </h1>
+      <div class="box-container container">
+
+         <a href="doctor1.html">
+            <div class="box">
+               <img src="images/pic-1.png" alt="">
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, iure? Nemo est aspernatur voluptatum
+                  id,
+                  laboriosam asperiores iure omnis alias?</p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+               <h3>john deo</h3>
+               <span>satisfied client</span>
+            </div>
+         </a>
+
+         <a href="doctor2.html">
+            <div class="box">
+               <img src="images/pic-2.png" alt="">
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, iure? Nemo est aspernatur voluptatum
+                  id,
+                  laboriosam asperiores iure omnis alias?</p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+               <h3>john deo</h3>
+               <span>satisfied client</span>
+            </div>
+         </a>
+
+         <a href="doctor3.html">
+            <div class="box">
+               <img src="images/pic-3.png" alt="">
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, iure? Nemo est aspernatur voluptatum
+                  id,
+                  laboriosam asperiores iure omnis alias?</p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+               <h3>john deo</h3>
+               <span>satisfied client</span>
+            </div>
+         </a>
+      </div>
+
+   </section>
+
+
+
+   <!-- services section starts  -->
+
+   <section class="services" id="services">
+
+      <h1 class="heading">our services</h1>
+
+      <div class="box-container container">
+
+         <div class="box">
+            <img src="images/icon-1.svg" alt="">
+            <h3>Alignment specialist</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, non?</p>
+         </div>
+
+         <div class="box">
+            <img src="images/icon-2.svg" alt="">
+            <h3>Cosmetic dentistry</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, non?</p>
+         </div>
+
+         <div class="box">
+            <img src="images/icon-3.svg" alt="">
+            <h3>Oral hygiene experts</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, minima?</p>
+         </div>
+
+         <div class="box">
+            <img src="images/icon-4.svg" alt="">
+            <h3>Root canal specialist</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, minima?</p>
+         </div>
+
+         <div class="box">
+            <img src="images/icon-5.svg" alt="">
+            <h3>Live dental advisory</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, minima?</p>
+         </div>
+
+         <div class="box">
+            <img src="images/icon-6.svg" alt="">
+            <h3>Cavity inspection</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, minima?</p>
+         </div>
+
+      </div>
+
+   </section>
+
+   <!-- services section ends -->
+
+   <!-- process section starts  -->
+
+   <section class="process">
+
+      <h1 class="heading">work process</h1>
+
+      <div class="box-container container">
+
+         <div class="box">
+            <img src="images/process-1.png" alt="">
+            <h3>Cosmetic Dentistry</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, excepturi?</p>
+         </div>
+
+         <div class="box">
+            <img src="images/process-2.png" alt="">
+            <h3>Pediatric Dentistry</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, excepturi?</p>
+         </div>
+
+         <div class="box">
+            <img src="images/process-3.png" alt="">
+            <h3>Dental Implants</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, excepturi?</p>
+         </div>
+
+      </div>
+
+   </section>
+
+   <!-- process section ends -->
+
+   <!-- reviews section starts  -->
+
+   <section class="reviews" id="reviews">
+
+      <h1 class="heading"> satisfied clients </h1>
+
+      <div class="box-container container">
+
+         <div class="box">
+            <i class="fa fa-quote-left"></i>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+               the industry's standard dummy text ever</p>
+            <div class="rating">
+               <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                  class="fa fa-star"></i> <i class="fa fa-star-o"></i>
+            </div>
+            <img alt="" src="images/review1.jpg">
+            <h3>Sean Parker</h3>
+         </div>
+
+         <div class="box">
+            <i class="fa fa-quote-left"></i>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+               the industry's standard dummy text ever</p>
+            <div class="rating">
+               <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                  class="fa fa-star"></i> <i class="fa fa-star-o"></i>
+            </div>
+            <img alt="" src="images/review2.jpg">
+            <h3>Sean Parker</h3>
+         </div>
+
+         <div class="box">
+            <i class="fa fa-quote-left"></i>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+               the industry's standard dummy text ever</p>
+            <div class="rating">
+               <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                  class="fa fa-star"></i> <i class="fa fa-star-o"></i>
+            </div>
+            <img alt="" src="images/review3.png">
+            <h3>Sean Parker</h3>
+         </div>
+
+         
+		   <a href="user-review.php" class="btn-primary">See More</a>
+      </div>
+
+   </section>
+
+   <!-- reviews section ends -->
+
+   <!-- contact section starts  -->
+
+
+   <section class="new" id="new">
+
+      <h1 class="heading">health news </h1>
+
+      <div class="box-container container">
+
+         <a href="news1.html">
+            <div class="box">
+               <img src="images/pic-1.png" alt="">
+               <h3>john deo</h3>
+               <span>健康文章1</span>
+            </div>
+         </a>
+
+         <a href="news2.html">
+            <div class="box">
+               <img src="images/pic-2.png" alt="">
+               <h3>john deo</h3>
+               <span>健康文章2</span>
+            </div>
+         </a>
+
+         <a href="news3.html"> 
+            <div class="box">
+
+               <img src="images/pic-3.png" alt="">
+
+               <h3>john deo</h3>
+               <span>健康文章3</span>
+            </div>
+         </a>
+      </div>
+
+   </section>
+
+
+
+
+   <!-- footer section starts  -->
+
+   <section class="footer" id ="contact">
+
+      <div class="box-container container">
+
+         <div class="box">
+            <i class="fas fa-phone"></i>
+            <h3>phone number</h3>
+            <p>+123-456-7890</p>
+            <p>+111-222-3333</p>
+         </div>
+
+         <div class="box">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>our address</h3>
+            <p>mumbai, india - 400104</p>
+         </div>
+
+         <div class="box">
+            <i class="fas fa-clock"></i>
+            <h3>opening hours</h3>
+            <p>00:07am to 10:00pm</p>
+         </div>
+
+         <div class="box">
+            <i class="fas fa-envelope"></i>
+            <h3>email address</h3>
+            <p>shaikhanas@gmail.com</p>
+            <p>anasbhai@gmail.com</p>
+         </div>
+
+      </div>
+
+      <div class="credit"> &copy; copyright @
+         <?php echo date('Y'); ?> by <span>Smile Bright team05 </span>
+      </div>
+
+   </section>
+
+   <!-- footer section ends -->
+
+
+
+
+
+
+   <!-- custom js file link  -->
+   <script src="js/script.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

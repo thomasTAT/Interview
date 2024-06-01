@@ -1,0 +1,179 @@
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Summary</title>
+    <link rel="stylesheet" href="css/cisc3003-PairAssgn-summary.css">
+
+</head>
+
+<body>
+    <!-- Main Content -->
+    <!-- Header -->
+    <header class="header">
+        <div class="container"> <!-- 左右加點padding -->
+            <div class="navbar"> <!--flex box-->
+                <div class="logo">
+                    <a href="cisc3003-PairAssgn-home.html"><img src="images/company_logo.png" width="125px" /></a>
+                    <p>Jumweb</p>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="cisc3003-PairAssgn.html">Home</a></li>
+                        <li><a href="pairProfile.html">Profile </a></li>
+                        <li><a href="pairSummary.html">Summary </a></li>
+                        <li><a href="pairShowcase.html">Showcase </a></li>
+                        <li><a href="pairQualification.html">Qualification</a></li>
+                    </ul>
+                </nav>
+                <img alt="" src="images/menu.png" width="30px" height="30px" class="menu-icon" onclick="menutoggle()">
+
+                </div>
+            </div>
+    </header>
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="row"> <!--flexbox , vertical center. space-around-->
+                    <div class="col-2">
+                       <h1>
+                            Start your business. </h1>
+                        <p>
+                            Build business websites for you.
+                        </p>
+                        <a href="#footer"  rel="noopener noreferrer" class="btn">Download &#8594;</a>
+                    </div>
+                    <div class="col-2">
+                        <img src="images/webdesign.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex-container wrapper">
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <ul class="nav-list">
+                    <li><a href="#Goals">Our Business Goals</a></li>
+                    <li><a href="#Commitments">Our Professional Commitments</a></li>
+                    <li><a href="#Offers">Our Future Directions</a></li>
+                </ul>
+            </aside>
+
+            <!-- Content -->
+            <section class="content">
+            
+              <h2 class="title" id="Goals">Our Business Goals</h2>
+                <div class="row" >
+                    <div class="col-3">
+                         <br />
+                        <small>At Jumweb, our main goal is to provide our clients with the best web development solutions that suit their needs and expectations. We aim to create web applications that are beautiful, functional and secure, using the latest technologies and best practices. We also strive to deliver our projects on time and within budget, ensuring customer satisfaction and loyalty.
+                        </small>
+                        <br />
+                         <br />
+                    </div>
+                </div>
+                
+                 <h2 class="title"id="Commitments">Our Professional Commitments</h2>
+                 <div class="row" >
+                    <div class="col-3">
+                         <br />
+                        <small>We are committed to excellence in everything we do. We follow the highest standards of quality and ethics in our work. We respect our clients and their privacy, and we communicate with them honestly and transparently. We value our team and their diversity, and we foster a culture of collaboration and learning. We constantly update our skills and knowledge, and we embrace innovation and creativity.
+                        </small>
+                        <br />
+                         <br />
+                    </div>
+                </div>
+                 <h2 class="title"id="Offers">Our Future Directions</h2>
+                 <div class="row" >
+                    <div class="col-3">
+                         <br />
+                        <small>We are always looking for new opportunities and challenges in the web development industry. We want to expand our portfolio and clientele, and we seek to work on projects that have a positive impact on society and the environment. We also want to explore new technologies and trends, such as artificial intelligence, cloud computing, voice user interface design, and more. We aspire to become a leader in the web development field, and we hope to inspire others with our work.
+                        </small>
+                        <br />
+                         <br />
+                    </div>
+                </div>
+                
+            </section>
+
+
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and ios mobile phone.</p>
+                        <div class="app-logo">
+                            <a href="https://play.google.com/store/apps/details?id=your-app-id">
+                                <img src="https://i.ibb.co/KbPTYYQ/play-store.png" alt="Google Play" />
+                            </a>
+                            <a href="https://itunes.apple.com/app/your-app-name/idyour-app-id">
+                                <img src="https://i.ibb.co/hVM4X2p/app-store.png" alt="App Store" />
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="footer-col-2">
+                        <img src="images/company_logo.png" />
+                        <p>
+                            Our mission is to assist individuals in managing their wealth and achieving early retirement.
+                        </p>
+                    </div>
+
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="#">Coupons</a></li>
+                            <li><a href="#">Blog Post</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Join Affiliate</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col-4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com">Facebook</a></li>
+                            <li><a href="https://www.twitter.com">Twitter</a></li>
+                            <li><a href="https://www.instagram.com">Instagram</a></li>
+                            <li><a href="https://www.youtube.com">Youtube</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright &copy; 2023 - Jumweb</p>
+            </div>
+        </footer>
+
+    </main>
+        <!-------- js for toggle menu ----------->
+	<script>
+		var MenuItems = document.getElementById("MenuItems");
+		
+		MenuItems.style.maxHeight = "0px";
+		
+		function menutoggle(){
+			if(MenuItems.style.maxHeight == "0px")
+				{
+					MenuItems.style.maxHeight = "200px";
+				}
+			else
+				{
+					MenuItems.style.maxHeight = "0px";
+				}
+		}
+		
+	</script>
+</body>
+
+</html>
