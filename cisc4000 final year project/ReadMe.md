@@ -2,7 +2,7 @@
 
 # Abstract
 
-The purpose of this report is to utilize deep learning to train a model for identifying dangerous motorcycle driving. First, YOLO is used to capture images and extract sections containing people and vehicles. Then, these images are fed into the model for training and prediction. Additionally, the Gradio framework is used to display the results. I am responsible for Method 1 in this project.
+The purpose of this report is to utilize deep learning to train a model for identifying dangerous motorcycle driving. First, YOLO is used to capture images and extract sections containing people and vehicles. Then, these images are fed into the model for training and prediction. Additionally, the Gradio framework is used to display the results. I am responsible for Method 1 in this project. Group 10 poster.jpg demonstrates this project.
 
 ## **Original yolo crop**
 
