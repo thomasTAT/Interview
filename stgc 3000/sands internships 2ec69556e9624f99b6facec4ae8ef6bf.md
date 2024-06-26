@@ -6,13 +6,16 @@ Inventory Sands' backup data tapes and record them on excel. And maintain the da
 
 Scan all the data backup tapes stored in different properties of Sands China with QR code scanners. Then record the backup tapes code and location into Excel spreadsheets. This is a huge job that requires a lot of time and effort, because Sands China has more than 20,000 backup data tapes in total. Precision is crucial throughout the process.
 
-![Untitled](sands%20internships%202ec69556e9624f99b6facec4ae8ef6bf/Untitled.png)
+<img src="sands%20internships%202ec69556e9624f99b6facec4ae8ef6bf/Untitled.png" alt="Untitled" style="height: 300px;">
 
 In the this step, a high degree of precision is essential. When scanning backup tapes, it is common to encounter challenges such as double scanning caused by hand tremors. To mitigate this issue, we use the conditional formatting to height the duplicate tap.
 
 conditional formatting →high-light cell rules → duplicate values.
 
-![Untitled](sands%20internships%202ec69556e9624f99b6facec4ae8ef6bf/Untitled%201.png)
+
+
+<img src="sands%20internships%202ec69556e9624f99b6facec4ae8ef6bf/Untitled%201.png" alt="示例圖片" height = "400px"  >
+
 
 The formula checks if the last two characters of a tape code in cell A1 match any of the specified values. If there is a match, the formula uses the RIGHT function to extract the last two characters, representing the tape type. Otherwise, it returns an empty string. By applying this formula to the designated column, we can automatically extract and store the tape types, significantly improving efficiency and accuracy.
 
