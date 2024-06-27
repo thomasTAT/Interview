@@ -168,7 +168,7 @@ section{
 }
 
 /* 修改提交後的訊息樣式 */
-/*待看*/
+
 .form form .message{
    margin-bottom: 2rem;
    border-radius: .5rem;
@@ -696,6 +696,8 @@ select {
 
 
    /*修改點擊 Humber 菜單的樣式*/
+
+   /*把 nav 用 position 移動到 class row 下方(top:100%), 在用 polygon 把 nav 擋住. 當點擊Humber 菜單選項,顯示 nav container */
    .header .nav{
 
       /* 讓 Humber row box 下方顯示。boostrap row or container 應該有 position relative*/
@@ -714,7 +716,8 @@ select {
       clip-path: polygon(0 0, 100% 0); 
    }
 
-   /*只有這個 box region 可以顯示*/
+   /*當點擊, 只有這個 box region 可以顯示*/
+   /* x,y,x,y,x,y,x,y , 左上角是 0 0*/
    .header .nav.active{
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
    }

@@ -42,4 +42,6 @@ The fourth step involves separating the Excel data from the backup data tape int
 
 ![Untitled](sands%20internships%202ec69556e9624f99b6facec4ae8ef6bf/Untitled%203.png)
 
-The final step involves maintaining the data. If the backup tapes have been relocated, it is important to update their location to reflect the most recent one and document who made the change. This ensures that the information about the backup tapes is accurate and up to date.
+The final step involves maintaining the data. If the backup tapes have been relocated, it is important to update their location to reflect the most recent one and document who made the change. This ensures that the information about the backup tapes is accurate and up to date.Use a pivot table to summarize the data.
+
+![Untitled](sands%20internships%202ec69556e9624f99b6facec4ae8ef6bf/pivot-table.png)
