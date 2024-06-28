@@ -1,0 +1,757 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+/* 建立全局變量 */
+:root{
+   --blue:#266980;
+   --black:#333;
+   --white:#FFFFFF;
+   --light-color:#666;
+   --light-bg:#F4F6F3;
+   --border:.2rem solid rgba(0,0,0,.1);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+/* 初始化 */
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; 
+   padding:0;
+   box-sizing: border-box;  /*把 padding 和 margin 都算進 box-sizing*/
+   outline: none; 
+   border:none;
+   text-decoration: none !important;
+   text-transform: capitalize;
+}
+
+/* 修改滾動條長高*/
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+/*修改軌道樣式*/
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+/*修改 滾動條樣式*/
+*::-webkit-scrollbar-thumb{
+   background-color: var(--blue);
+}
+
+/*控制 點擊導航欄，跳轉時候的樣式*/
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 6.5rem;
+}
+
+/* Heading 之間來點 padding */
+section{
+   padding:7rem 2rem;
+}
+
+/* 修改 所有 標題 樣式 */
+.heading{
+   text-align: center;
+   font-size: 4rem;
+   color:var(--black);
+   text-transform: uppercase;
+   font-weight: bolder;
+   margin-bottom: 3rem;
+}
+
+/* 修改 make appointment 按鈕樣式 */
+.link-btn{
+   display: inline-block;
+   padding:1rem 3rem;
+   border-radius: .5rem;
+   background-color: var(--blue);
+   cursor: pointer;
+   font-size: 1.7rem;
+   color:var(--white);
+}
+
+.link-btn:hover{
+   background-color: var(--black);
+   color:var(--white);
+}
+
+
+/* 修改 header 樣式 */
+.header{
+   padding:2rem;
+   border-bottom: var(--border);
+}
+
+/* booastrap  javascripe dynamic add the active class*/
+.header.active{
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border:0;
+} 
+
+.header .logo{
+   font-size: 2rem;
+   color:var(--black);
+   font-weight: 900;
+}
+
+.header .logo span{
+   color:var(--blue);
+}
+
+.header .nav a{
+   margin:0 1rem;
+   font-size: 1.7rem;
+   color:var(--black);
+}
+
+.header .nav a:hover{
+   color:var(--blue);
+}
+
+/* 修改 nav hamburger 按鈕樣式 */
+#menu-btn{
+   font-size: 2.5rem;
+   color:var(--black);
+   cursor: pointer;
+   display: none;
+}
+
+
+/* 修改頁面 海報位置樣式 */
+.home{
+   background:url(../images/home-bg.jpg) no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+/* 修改 content box 樣式*/
+.home .content{
+   width: 55rem;
+   padding:2rem;
+}
+
+/* 修改標題樣式 brighten your...*/
+.home .content h3{
+   padding-left:2rem;
+   font-size: 6rem;
+   text-transform: uppercase;
+   color:var(--black);
+}
+
+/* 修改標題下面的文字樣式 */
+.home .content p{
+   margin-left:2rem;
+   line-height: 2;
+   font-size: 1.5rem;
+   color:var(--light-color);
+   padding:1rem 0;
+}
+
+
+
+/* 修改主頁 form box 樣式，背景顏色。 */
+.form form{
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   padding:2rem;
+   margin:0 auto;
+   max-width: 50rem;
+}
+
+/* 修改提交後的訊息樣式 */
+
+.form form .message{
+   margin-bottom: 2rem;
+   border-radius: .5rem;
+   background-color: var(--blue);
+   padding:1.2rem 1rem;
+   font-size: 1.7rem;
+   color:var(--white);
+   text-align: center;
+}
+
+/* form  輸入白框樣式*/
+.form form .box{
+   width: 100%;
+   margin-top: 1rem;
+   margin-bottom: 2rem;
+   border-radius: .5rem;
+   background-color: var(--white);
+   padding:1.2rem 1.4rem;
+   font-size: 1.7rem;
+   color:var(--black);
+   text-transform: none;
+}
+
+/* 修改 白色輸入框上面文字的樣式*/
+.form form span{
+   font-size: 1.7rem;
+   color:var(--black);
+}
+
+
+/*recommendation*/
+.recommendation img{
+   object-fit: cover;
+   height:550px;
+   width: 100%;
+}
+
+/* about section 樣式*/
+.about{
+   background-color: var(--light-bg);
+}
+
+.about .row{
+   min-height: 50vh;
+}
+
+/* about Us 樣式*/
+.about .content span{
+   font-size: 2rem;
+   color:var(--blue);
+}
+
+.about .content h3{
+   font-size: 3rem;
+   color:var(--black);
+   margin-top: 1rem;
+}
+
+.about .content p{
+   padding:1rem 0;
+   font-size: 1.4rem;
+   color:var(--light-color);
+   line-height: 2;
+}
+
+
+.doctor{
+   /* background-color: var(--light-bg); */
+}
+
+
+/* 醫生 Grid 樣式 */
+.doctor .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+}
+
+/*醫生卡片樣式*/
+.doctor .box-container .box{
+   background-color: var(--white);
+   text-align: center;
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   padding:2rem;
+   transition: transform 0.5s;
+}
+
+.doctor .box:hover{
+	transform: translateY(-10px);
+}
+
+.doctor .box-container .box img{
+   height: 10rem;
+   width: 10rem;
+   border-radius: 50%;
+}
+
+/*醫生文字下面的樣式*/
+.doctor .box-container .box p{
+   padding:2rem 0;
+   line-height: 2;
+   font-size: 1.5rem;
+   color:var(--light-color);
+   margin-bottom: 0;
+}
+
+/*醫生星星 container 樣式*/
+.doctor .box-container .box .stars{
+   padding:.5rem 1.5rem;
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   margin-bottom: 2rem;
+   display: inline-block;
+}
+
+/*醫生星星樣式*/
+.doctor .box-container .box .stars i{
+   font-size: 1.5rem;
+   color:var(--blue);
+}
+
+/*醫生 名字樣式*/
+.doctor .box-container .box h3{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+/*醫生 介紹樣式*/
+.doctor .box-container .box span{
+   color:var(--light-color);
+   font-size: 1.5rem;
+}
+
+
+/* services section 樣式*/
+.services{
+   background-color: var(--light-bg);
+}
+
+/* services container grid 樣式*/
+.services .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+}
+
+/* sevice box container 樣式*/
+.services .box-container .box{
+   text-align: center;
+   padding:2rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+}
+
+.services .box-container .box img{
+   margin:1rem 0;
+   height: 4rem;
+}
+
+.services .box-container .box h3{
+   font-size: 2rem;
+   padding:1rem 0;
+   color:var(--black);
+}
+
+.services .box-container .box p{
+   font-size: 1.5rem;
+   color:var(--light-color);
+   line-height: 2;
+}
+
+.process{
+      background-color: var(--white)!important; 
+}
+
+.process .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+}
+
+.process .box-container .box{
+   background-color: var(--blue);
+   padding:2rem;
+   border-radius: .5rem;
+   text-align: center;
+   box-shadow: var(--box-shadow);
+}
+
+.process .box-container .box img{
+   height: 20rem;
+   margin:1rem 0;
+}
+
+.process .box-container .box h3{
+   font-size: 2rem;
+   color:var(--white);
+   margin:1.5rem 0;
+}
+
+.process .box-container .box p{
+   font-size: 1.5rem;
+   color:var(--white);
+   line-height: 2;
+}
+
+.reviews{
+   background-color: var(--light-bg);
+}
+
+.reviews .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+}
+
+.reviews .box-container .box{
+   background-color: var(--white);
+   text-align: center;
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   padding:2rem;
+}
+
+.reviews .box-container .box img{
+   height: 10rem;
+   width: 10rem;
+   border-radius: 50%;
+}
+
+.reviews .box-container .box p{
+   padding:2rem 0;
+   line-height: 2;
+   font-size: 1.5rem;
+   color:var(--light-color);
+   margin-bottom: 0;
+}
+
+.reviews .box-container .box .stars{
+   padding:.5rem 1.5rem;
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   margin-bottom: 2rem;
+   display: inline-block;
+}
+
+.reviews .box-container .box .stars i{
+   font-size: 1.5rem;
+   color:var(--blue);
+}
+
+.reviews .box-container .box h3{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.reviews .box-container .box span{
+   color:var(--light-color);
+   font-size: 1.5rem;
+}
+
+.reviews-rating .fa{
+   font-size: 1.5rem;
+}
+
+.fa.fa-quote-left{
+	font-size: 34px;
+	color: var(--blue);
+}
+.rating .fa{
+	color: var(--blue);
+}
+
+
+
+.reviews-rating {
+   float: right;
+}
+
+.review-box {
+   background-color: var(--white);
+   text-align: left;
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   padding:2rem;
+   margin-bottom: 1rem;
+}
+
+.review-icon {
+   height: 4rem;
+   width: 4rem;
+   border-radius: 50%;
+   float: left;
+   margin-right: 1rem;
+}
+
+.add-reviews {
+   background-color: var(--write)!important;
+}
+
+.tbl-30{
+   width: 100%;
+
+}
+
+/*satisfied clients see more css*/
+.btn-primary {
+   padding: 1rem;
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 0.5rem;
+   background-color: var(--blue);
+}
+
+textarea {
+   border: 1px solid var(--blue);
+   width: 100%;
+   display: flex;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 1rem;
+   font-size: 12px;
+}
+
+.reviews-rating .fa {
+   color: var(--blue);
+}
+
+select {
+	border: 1px solid var(--blue);
+	margin-bottom: 10px;
+}
+
+.header {
+	background-color: var(--bg);
+}
+
+
+
+/*heath news*/
+.new{
+   background-color: var(--white);
+
+}
+
+.new .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+}
+
+.new .box-container .box{
+   background-color: var(--white);
+   text-align: center;
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   padding:2rem;
+   transition: transform 0.5s;
+}
+.new .box:hover{
+	transform: translateY(-10px);
+}
+
+
+.new .box-container .box img{
+   height: 20rem;
+   width: 100%;
+   object-fit:cover;
+   border-radius: .5rem;
+
+}
+
+.new .box-container .box p{
+   padding:2rem 0;
+   line-height: 2;
+   font-size: 1.5rem;
+   color:var(--light-color);
+   margin-bottom: 0;
+}
+
+
+.new .box-container .box h3{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.new .box-container .box span{
+   color:var(--light-color);
+   font-size: 1.5rem;
+}
+
+.mt-40{
+   margin-top: 40px;
+}
+
+/*health news*/
+
+.process{
+      background-color: var(--light-bg); 
+
+}
+
+.contact form{
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   padding:2rem;
+   margin:0 auto;
+   max-width: 50rem;
+}
+
+.contact form .message{
+   margin-bottom: 2rem;
+   border-radius: .5rem;
+   background-color: var(--blue);
+   padding:1.2rem 1rem;
+   font-size: 1.7rem;
+   color:var(--white);
+   text-align: center;
+}
+
+.contact form .box{
+   width: 100%;
+   margin-top: 1rem;
+   margin-bottom: 2rem;
+   border-radius: .5rem;
+   background-color: var(--white);
+   padding:1.2rem 1.4rem;
+   font-size: 1.7rem;
+   color:var(--black);
+   text-transform: none;
+}
+
+.contact form span{
+   font-size: 1.7rem;
+   color:var(--black);
+}
+
+.footer{
+   background-color: var(--light-bg);
+}
+
+.footer .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   gap:3rem;
+}
+
+.footer .box-container .box{
+   text-align: center;
+}
+
+/* footer logo css*/
+.footer .box-container .box i{
+   height: 5rem;
+   width: 5rem;
+   border-radius: 50%;
+   line-height: 5rem;
+   font-size: 2rem;
+   background-color: var(--blue);
+   color:var(--white);
+}
+
+.footer .box-container .box h3{
+   font-size: 2rem;
+   margin:2rem 0;
+   color:var(--black);
+}
+
+.footer .box-container .box p{
+   font-size: 1.5rem;
+   color:var(--light-color);
+   text-transform: none;
+}
+
+.footer .credit{
+   text-align: center;
+   border-top: var(--border);
+   padding-top: 2rem;
+   margin-top: 2rem;
+   font-size: 2rem;
+   color:var(--light-color);
+}
+
+.footer .credit span{
+   color:var(--blue);
+}
+
+
+/*待看*/
+.subpage {
+   padding-bottom: 7rem;
+   background-color: var(--light-bg);
+}
+
+/* media queries  */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+   .header .link-btn{
+      display: none;
+   }
+
+   section{
+      padding:5rem 2rem;
+   }
+
+}
+
+@media (max-width:768px){
+
+   section{
+      padding:3rem 1rem;
+   }
+
+   #menu-btn{
+      display: inline-block;
+      transition: .2s linear;
+   }
+
+   #menu-btn.fa-times{
+      transform: rotate(180deg);
+   }
+
+
+   /*修改點擊 Humber 菜單的樣式*/
+
+   /*把 nav 用 position 移動到 class row 下方(top:100%), 在用 polygon 把 nav 擋住. 當點擊Humber 菜單選項,顯示 nav container */
+   .header .nav{
+
+      /* 讓 Humber row box 下方顯示。boostrap row or container 應該有 position relative*/
+      position: absolute; 
+      top:100%; 
+      left: 0; 
+      right:0;
+      background-color: var(--white);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      padding:1rem 0;
+      text-align: center;
+      flex-flow: column;
+
+      /*把 humber 菜單擋住 */
+      clip-path: polygon(0 0, 100% 0); 
+   }
+
+   /*當點擊, 只有這個 box region 可以顯示*/
+   /* x,y,x,y,x,y,x,y , 左上角是 0 0*/
+   .header .nav.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .nav a{
+      margin:1rem 0;
+      font-size: 2rem;
+   }
+
+   /*修改封面圖片位置*/
+   .home{
+      background-position: left;
+   }
+
+   
+   .home .content{
+      width: auto;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .home .content h3{
+      font-size: 4rem;
+   }
+
+   .heading{
+      font-size: 3rem;
+   }
+
+}
