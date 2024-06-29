@@ -55,14 +55,20 @@ class player():
     self.hitbox = (self.x+17, self.y+11, 29, 52)
 
   def hit(self):
+
+    # 人物回到左邊。
     self.x = 60 
     self.y = 410
     self.walkCount = 0
+
+    # 中間顯示 -5 分數
     font1 = pygame.font.SysFont('comicsans', 100)
     text = font1.render('-5', 1, (255,0,0))
     win.blit(text, (250 - (text.get_width()/2),200))
+
     pygame.display.update()
 
+    #  顯示3 秒
     i = 0
     while i < 300:
         pygame.time.delay(10)
@@ -176,6 +182,8 @@ score = 0
 
 while run:
   clock.tick(27)
+
+  # 判斷碰撞.
   """
   #  self.hitbox = (self.x + 17, self.y + 2, 31, 57)
   # 判断y 坐标
@@ -186,7 +194,16 @@ while run:
   # goblin.hitbox[1] = 上线
   """
 
-  if man.hitbox[1] < goblin.hitbox[1] + goblin.hitbox[3] and man.hitbox[1] + man.hitbox[3] > goblin.hitbox[1]:
+#   self.hitbox = (self.x, self.y, 29, 52)
+
+  man_top = man.hitbox[1]
+  goblin_bottom = goblin.hitbox[1] + goblin.hitbox[3]
+
+  man_bottom = man.hitbox[1] + man.hitbox[3]
+  goblin_top = goblin.hitbox[1]
+
+
+  if man_top < goblin_bottom  and man_bottom > goblin_top:
 
 
     """
@@ -198,7 +215,14 @@ while run:
     # man.hitbox[0] = 左线
     #  goblin.hitbox[0] + goblin.hitbox[2] = 右线
     """
-    if man.hitbox[0] + man.hitbox[2] > goblin.hitbox[0] and man.hitbox[0] < goblin.hitbox[0] + goblin.hitbox[2]:
+
+    man_right = man.hitbox[0] + man.hitbox[2]
+    goblin_left = goblin.hitbox[0]
+
+    man_left = man.hitbox[0]
+    goblin_right = goblin.hitbox[0] + goblin.hitbox[2]
+
+    if man_right > goblin_left and man_left < goblin_right:
         man.hit()
         score -= 5
     

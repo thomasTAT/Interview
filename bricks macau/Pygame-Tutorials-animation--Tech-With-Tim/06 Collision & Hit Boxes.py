@@ -138,12 +138,26 @@ while run:
         if event.type == pygame.QUIT:
             run = False
 
-    for bullet in bullets:
-        # 子彈底部 y 座標小過, 哥布林頭頂 和 子彈頂部座標, 大過哥布林腳底.    y 座標上 在哥布林之間
-        if bullet.y - bullet.radius < goblin.hitbox[1] + goblin.hitbox[3] and bullet.y + bullet.radius > goblin.hitbox[1]:
+    """判斷 bullet collision"""
 
-            # 子彈右側, 大過哥布林,左邊界 和 子彈左側,小過哥布林右側.                 x 坐標上 在哥布林之間.
-            if bullet.x + bullet.radius > goblin.hitbox[0] and bullet.x - bullet.radius < goblin.hitbox[0] + goblin.hitbox[2]:
+    for bullet in bullets:
+
+        bullet_top = bullet.y - bullet.radius 
+        goblin_bottom = goblin.hitbox[1] + goblin.hitbox[3]
+
+        bullet_bottom = bullet.y + bullet.radius
+        goblin_top = goblin.hitbox[1]
+        
+
+        if bullet_top < goblin_bottom and bullet_bottom > goblin_top:
+
+            bullet_right = bullet.x + bullet.radius
+            goblin_left = goblin.hitbox[0]
+
+            bullet_left = bullet.x - bullet.radius 
+            goblin_right = goblin.hitbox[0] + goblin.hitbox[2]
+
+            if bullet_right > goblin_left and bullet_left < goblin_right:
                 goblin.hit()
                 bullets.pop(bullets.index(bullet))
 
