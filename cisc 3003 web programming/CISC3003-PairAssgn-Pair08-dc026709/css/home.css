@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+}
+
+/* container 窗口居中 */
+.container {
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    max-width: 75rem;
+}
+
+
+p {
+    color: #000000e0;
+}
+
+h1 {
+    color: #000;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*
+ header 
+*/
+.header {
+    background-color: #000;
+    background: radial-gradient(#eee, #ECF7F8);
+}
+
+.logo p {
+    font-size: 2rem;
+    font-family: Helvetica;
+}
+
+/* logo和標語打橫 */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* header 打橫 */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+/* nav 裡面的選項 變成打橫 */
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+}
+
+nav a {
+    font-size: 1.25rem;
+}
+
+/* Humber menu */
+.menu-icon {
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+/* 點擊 humber 菜單 menu-icon */
+@media only screen and (max-width: 800px) {
+
+
+    /* 如果li 超出 ul container 將 ul 隱藏 */
+    nav ul {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    /* 菜单连接改成竖 */
+    nav ul li {
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: #fff;
+    }
+
+    /* 顯示 menu icon */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* 
+Hero
+*/
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+    padding: 2rem;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+/* 底部 button css */
+.btn {
+    display: inline-block;
+    font-size: 1.25rem;
+    background: #ff523b;
+    background: blue;
+    color: #ffffff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: rgba(0, 0, 255, 0.473);
+}
+
+.hero {
+    background: radial-gradient(#eee, #ECF7F8);
+}
+
+
+
+
+/*sidebar*/
+.sidebar {
+    flex-basis: 15%;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+
+}
+
+/* 超过視窗仍然顯示在最上方 */
+.nav-list {
+    position: sticky;
+    top: 0;
+}
+
+.nav-list li {
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+.nav-list li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-list li a:hover {
+    transform: translateY(-5px);
+    font-weight: bold;
+}
+
+/*sidebar*/
+
+
+
+/* 窗口不小于 640px 执行flex，使得存在侧边栏 */
+@media screen and (min-width:640px) {
+    .flex-container {
+        display: flex
+    }
+}
+
+.wrapper {
+    margin: auto;
+    max-width: 75rem;
+}
+
+/*content*/
+.content {
+    flex-basis: 85%;
+    flex-grow: 1;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #000;
+}
+
+
+.content .row {
+    padding-bottom: 2rem;
+}
+
+.content h1 {
+    font-size: 1.7rem;
+    line-height: normal;
+}
+
+
+/* 
+ceo
+ */
+
+.ceo {
+    margin-top: 0rem;
+}
+
+.ceo .col-2 {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+/* ceo 大頭貼圖片樣式 */
+.ceo .col-2 img {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 25px
+}
+
+.ceo .col-2:hover {
+    transform: translateY(-10px);
+}
+
+/* 合作夥伴圖片樣式 */
+.col-5 img {
+    width: 180px;
+    height: 90px;
+}
+
+/* 標題樣式 */
+.title {
+    text-align: center;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* 標題樣式下面的下劃線 */
+.title::after {
+    content: "";
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+/* 
+footer
+*/
+
+.footer {
+    background: #000;
+    color: #8a8a8a;
+    font-size: 1.1rem;
+    padding: 60px 0 20px;
+}
+
+.footer p {
+    color: #8a8a8a;
+}
+
+.footer h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer li a {
+    color: #8a8a8a;
+    transition: all 0.3s ease;
+}
+
+.footer li a:hover {
+    transform: translateY(-2px);
+    font-weight: bold;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-col-1 {
+    flex-basis: 30%;
+}
+
+
+.footer-col-2 {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col-2 img {
+    width: 180px;
+    margin-bottom: 20px;
+
+}
+
+.footer-col-3,
+.footer-col-4 {
+    flex-basis: 12%;
+    text-align: center;
+}
+
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 140px;
+}
+
+.footer hr {
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+}

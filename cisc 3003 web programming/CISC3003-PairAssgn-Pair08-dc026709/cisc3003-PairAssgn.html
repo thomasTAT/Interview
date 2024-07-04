@@ -27,13 +27,13 @@
                         <li><a href="pairQualification.html">Qualification</a></li>
                     </ul>
                 </nav>
-                <!-- onclik  -->
+                <!-- onclik 調用 JavaScript 修改 menuItems container 高 -->
                 <img alt="" src="images/menu.png" width="30px" height="30px" class="menu-icon" onclick="menutoggle()">
             </div>
-       	</div>
-            
+        </div>
+
     </header>
-    
+
     <main>
         <!-- Hero -->
         <section class="hero">
@@ -67,71 +67,84 @@
 
             <!-- Content -->
             <section class="content">
+
                 <div class="Our Company" id="Our Company">
                     <h2 class="title">Our Company</h2>
+
                     <div class="row">
+
                         <div class="col-2">
                             <img src="images/invest.svg" alt="" class="offer-img" />
                         </div>
                         <div class="col-2">
-                            <h1>Our company's goal is to provide innovative and high quality web design services to for our clients.
+                            <h1>Our company's goal is to provide innovative and high quality web design services to for
+                                our clients.
                             </h1>
                             <p>Professional and innovative, unlimited possibilities for your website
-                                We are a web design company founded by Thomas and Jimmy, graduates of the computer science program at the University of Macau. With our expertise and passion for web design, we are dedicated to providing top-notch services to our clients. Our company strives to create unique and innovative designs that meet the specific needs of each client.
+                                We are a web design company founded by Thomas and Jimmy, graduates of the computer
+                                science program at the University of Macau. With our expertise and passion for web
+                                design, we are dedicated to providing top-notch services to our clients. Our company
+                                strives to create unique and innovative designs that meet the specific needs of each
+                                client.
                             </p>
                             <br />
                         </div>
+                    </div>
+                </div>
 
-                        <div class="ceo" id="ceo">
-                            <h2 class="title">CEO</h2>
-                            <div class="row">
-                                <div class="col-2">
-                                    <p>
-                                        I am Jimmy, a computer science student who graduated from Um. Thomas's partner, Jumweb founder. We want to build a web design company that develop your web application using the best tools and techniques. 
-                                    </p>
+                <div class="ceo" id="ceo">
+                    <h2 class="title">CEO</h2>
+                    <div class="row">
+                        <div class="col-2">
+                            <p>
+                                I am Jimmy, a computer science student who graduated from Um. Thomas's partner,
+                                Jumweb founder. We want to build a web design company that develop your web
+                                application using the best tools and techniques.
+                            </p>
 
-                                    <img src="images/self2.jpg" alt="CEO Jimmy" />
-                                    <h3>Jimmy</h3>
-                                </div>
+                            <img src="images/self2.jpg" alt="CEO Jimmy" />
+                            <h3>Jimmy</h3>
+                        </div>
 
-								
-                                <div class="col-2">
-                                    <p>
-                                        My name is Thomas and I graduated from the computer science program.Together with Jimmy, we founded Jumweb, a web design company dedicated to providing high-quality services to our clients.
-                                    </p>
-                                    <img src="images/self.png" alt="CEO Thomas" />
-                                    <h3>Peanut</h3>
-                                </div>
-                            </div>
-						</div>
-                            <!-- brands -->
-                            <div class="brands" id ="brands">
-                                <h2 class="title">cooperation partner
-                                </h2>
-                                <div class="row">
-                                    <div class="col-5">
-                                        <img src="images/OIP.jpg" alt="" />
-                                    </div>
 
-                                    <div class="col-5">
-                                        <img src="images/boc.png" alt="" />
-                                    </div>
-
-                                    <div class="col-5">
-                                        <img src="images/mapy.png" alt="" />
-                                    </div>
-
-                                    <div class="col-5">
-                                        <img src="images/tdm.jpg" alt="" />
-                                    </div>
-
-                                    <div class="col-5">
-                                        <img src="images/ctm.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-2">
+                            <p>
+                                My name is Thomas and I graduated from the computer science program.Together
+                                with Jimmy, we founded Jumweb, a web design company dedicated to providing
+                                high-quality services to our clients.
+                            </p>
+                            <img src="images/self.png" alt="CEO Thomas" />
+                            <h3>Peanut</h3>
                         </div>
                     </div>
+                </div>
+
+                <!-- brands -->
+                <div class="brands" id="brands">
+                    <h2 class="title">cooperation partner
+                    </h2>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="images/OIP.jpg" alt="" />
+                        </div>
+
+                        <div class="col-5">
+                            <img src="images/boc.png" alt="" />
+                        </div>
+
+                        <div class="col-5">
+                            <img src="images/mapy.png" alt="" />
+                        </div>
+
+                        <div class="col-5">
+                            <img src="images/tdm.jpg" alt="" />
+                        </div>
+
+                        <div class="col-5">
+                            <img src="images/ctm.png" alt="" />
+                        </div>
+                    </div>
+                </div>
 
             </section>
 
@@ -158,7 +171,8 @@
                     <div class="footer-col-2">
                         <img src="images/company_logo.png" />
                         <p>
-                            Our company's goal is to provide innovative and high quality web design services to for our clients.
+                            Our company's goal is to provide innovative and high quality web design services to for our
+                            clients.
                         </p>
                     </div>
 
@@ -190,27 +204,25 @@
 
     </main>
 
-    
+
     <!-------- js for toggle menu ----------->
 
     <!-- 设置 meniItems 的最大高度，如果为 0，那么它就会隐藏，因为 overflow：hidden -->
-	<script>
-		var MenuItems = document.getElementById("MenuItems");
-		
-		MenuItems.style.maxHeight = "0px";
-		
-		function menutoggle(){
-			if(MenuItems.style.maxHeight == "0px")
-				{
-					MenuItems.style.maxHeight = "200px";
-				}
-			else
-				{
-					MenuItems.style.maxHeight = "0px";
-				}
-		}
-		
-	</script>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+    </script>
 </body>
 
 </html>

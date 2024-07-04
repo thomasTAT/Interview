@@ -22,7 +22,8 @@ css 上用了 `scroll-behavior: smooth`,點擊鏈接跳轉,更加 smooth.
 
 
 ## Doctor 子頁面
-Header 和 home page 類似.
+**Header**
+ 和 home page 類似.
 
 **about**
 利用了 Bootstrap col-md-6 進行佈局.
