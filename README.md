@@ -17,5 +17,7 @@ My final year project focuses on detecting dangerous driving behaviors among mot
 ## [Stgc 3000](Stgc%203000)
 Enhanced my proficiency in Excel. I familiarized myself with the utilization of conditional formatting, filtering, pivot tables, flash fill, VLOOKUP.
 
-## [Bricks macau/Pygame-Tutorials-animation--Tech-With-Tim](Bricks%20macau/Pygame-Tutorials-animation--Tech-With-Tim)
+## [Bricks macau/Pygame-Tutorials-animation--Tech-With-Tim](bricks%20macau/Pygame-Tutorials-animation--Tech-With-Tim)
 Teaching Primary or Secondary Students Pygame: Using Object-Oriented Programming to Create a shoot monster game and python language.
+
+
