@@ -5,6 +5,9 @@
 
 **Header**: 使用了 bootstrap fix top ，讓他永遠置頂。hearer 使用了 bootstrap 的 `.container` 和 `.row`，實現 responsive css。`.row` 是一個 flex box，可以用 `align-items` 和 `justify` 對 `.row` 裡面的 box 進行排版。
 
+<img src="show case/header.png" alt="圖片描述">
+
+
 **導航欄**: 利用 media query 做了個 Hamburger Menu，當窗口縮小，make appointment 會消失。窗口再繼續消失，nav 就會被隱藏，需要點擊三行才可以展開。 實現方法是利用了 `position`，把 nav 移動到下方，在用 polygon 將其隱藏。點擊 polygon 設置將 nav 顯示。利用 `flex-flow`
 css 上用了 `scroll-behavior: smooth`,點擊鏈接跳轉,更加 smooth.
 

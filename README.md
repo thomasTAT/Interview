@@ -11,7 +11,7 @@ Using HTML, CSS, flex box, grid, media query,Bootstrap, to create a doctor's web
   Design a simple structure for a hospital MySQL database in Mysql workbench. Learning some basic sql query such as group by, having,left join, nest query.
 
 
-## [CISC4000 Final year project](CISC4000%20final%20year%20project)
+## [CISC4000 Final year project](cisc4000%20final%20year%20project)
 My final year project focuses on detecting dangerous driving behaviors among motorcyclists. I have acquired proficiency in Python and TensorFlow Keras, utilizing them to execute image classification tasks. Additionally, I employed custom training with YOLO to crop images effectively. Moreover, I utilized Gradio to develop an intuitive user interface for the project
 
 ## [Stgc 3000](stgc%203000)
