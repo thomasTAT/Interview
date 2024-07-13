@@ -27,6 +27,7 @@ url = '/kaggle/input/all-in-4-class-balance-onehand-2024-3-19/01/IMG_20240110_12
 Once the setup is complete, simply click "Save Version" to run the notebook, and the output results will be generated.
 
 Use the original yolo model to corp driver and motrocycle has drawbacks. This method only accepts image that only contain one people and one motorcycle car. otherwise, it will course error.
+
 <img src="Show case/drawback.png" height=200px>
 
 ## Customize yoloV8 crop model
