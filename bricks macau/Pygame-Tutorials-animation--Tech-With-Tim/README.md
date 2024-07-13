@@ -11,7 +11,7 @@ Man 的移動通過 Pygame 檢測鍵盤是否有上下移動或跳躍的指令�
 Goblin 的移動則設置了起點和終點，在主循環中修改 Goblin 的 x 座標，使其在這兩點之間來回移動。
 
 <div style="display: flex; gap: 20px;">
-    <img src="show%20case/game%20play%201.png" height="250">
-    <img src="show%20case/game%20play%202.png" height="250">
-    <img src="show%20case/game%20play%203.png" height="250">
+    <img src="Show%20case/game%20play%201.png" height="250">
+    <img src="Show%20case/game%20play%202.png" height="250">
+    <img src="Show%20case/game%20play%203.png" height="250">
 </div>
