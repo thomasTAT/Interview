@@ -19,21 +19,22 @@
 css 上用了 `scroll-behavior: smooth`,點擊鏈接跳轉,更加 smooth.
 
 **section `.home`** 部分用了，圖片作為 background。利用 bootstrap 製造 .container .row。裡面裝著 .content， .content 裝著 標題 form等訊息。 限制了 .content 的寬, 因此內容靠左。
-  <img src="show case/home.png" height="200px">
+
+<div> <img src="show case/home.png" height="200px"> </div>
 
 
 **recommend section** 抄了 bootstrap 的代碼,實現了幻燈片(Carrousel).
-<img src="show case/recommendation.png" height="200px">
+<div><img src="show case/recommendation.png" height="200px"></div>
 
 
 
 **about us section** 利用了 col-md-6 , 在 row 的基礎上,劃分 2 個column. 左邊顯示圖片,右邊顯示諮詢.
-<img src="show case/about.png" height="200px">
+<div><img src="show case/about.png" height="200px"></div>
 
 
 **doctor section** 利用了 `grid-template-columns: repeat(auto-fit,minmax(30rem,1fr)` 自動生成 column. container 縮小, 醫生box 會根據視窗大小 warp.
 
-<img src="show case/doctor.png" height="400px">
+<div><img src="show case/doctor.png" height="400px"></div>
 
 
 下面的section 做法完全一致.

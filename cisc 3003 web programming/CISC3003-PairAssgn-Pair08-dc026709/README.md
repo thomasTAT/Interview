@@ -13,15 +13,9 @@
 
 
 <div style="display: flex; gap: 100px;">
-    <img src="show%20case/row.png" alt="圖片描述" height =300 style="margin-right: 100px;" >
+    <img src="show%20case/row.png" alt="圖片描述" height =300 >
     <img src="show%20case/warp.png" alt="圖片描述" height =300 >
 </div>
-
-<img src="show%20case/row.png" alt="圖片描述" height =300 style="margin-right: 100px;" >
-<img src="show%20case/warp.png" alt="圖片描述" height =300 >
-
-
-
 <p></p>
 
 **side bar 和 content** 有一個 flexbox 容器，裡面包含了側邊欄（side bar）區塊和內容（content）區塊。側邊欄佔用橫向空間的 15%，內容區塊佔用橫向空間的 85%。內容區塊進一步被分割成多個橫排（row）。
