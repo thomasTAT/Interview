@@ -75,6 +75,11 @@ def p29():
 
 
 
-a = any([None,[],(),{}])
-print(a)
+# a = any([None,[],(),{}])
+# print(a)
 
+###
+a = 10
+perimeter = a * 4
+area = a ** 2
+print(f'perimeter = {perimeter}, area = {area}')  
