@@ -4,7 +4,7 @@ Projects learned during both university studies and part-time job are particular
 ## [Academic reports](Academic%20Reports/)
 Grades during my studies at the University of Macau.
 
-<img src="Show case/GPA.png" height = 150px>
+<img src="Show case/gpa.png" height = 150px>
 
 ## [cisc3003 web programming](cisc%203003%20web%20programming)
 Using HTML, CSS, flex box, grid, media query,Bootstrap, to create a doctor's website and company website.
