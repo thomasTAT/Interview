@@ -9,6 +9,10 @@ Grades during my studies at the University of Macau.
 ## [cisc3003 web programming](cisc%203003%20web%20programming)
 Using HTML, CSS, flex box, grid, media query,Bootstrap, to create a doctor's website and company website.
 
+<img src="Show case/company website.png" height = 150px>
+<p></p>
+<img src="Show case/doctor website.png" height = 150px>
+
 ## [cisc3000 database mysql](cisc3000%20database%20mysql)
   Design a simple structure for a hospital MySQL database in Mysql workbench. Learning some basic sql query such as group by, having,left join, nest query.
 
