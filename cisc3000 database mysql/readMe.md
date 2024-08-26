@@ -64,6 +64,13 @@ LEFT JOIN appointments ON doctors.doctor_id = appointments.doctor_id
 GROUP BY doctors.doctor_id;
 ```
 
+```sql
+select count( distinct patients), doctor_id
+from admission
+group by doctor_id
+```
+
+
 heck the percentage rate of ward occupation of corresponding department, occupancy rate round off to 3 decimal places.
 ``` sql
 SELECT wards.ward_id, wards.ward_name, ROUND((occupied_beds / capacity) * 100, 3) AS occupancy_rate

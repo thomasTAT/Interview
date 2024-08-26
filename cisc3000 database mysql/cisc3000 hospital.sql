@@ -169,6 +169,7 @@ FROM doctors
 LEFT JOIN appointments ON doctors.doctor_id = appointments.doctor_id
 GROUP BY doctors.doctor_id;
 
+
 # check the percentage rate of ward occupation of corresponding department, occupancy rate round off to 3 decimal places.
 SELECT wards.ward_id, wards.ward_name, ROUND((occupied_beds / capacity) * 100, 3) AS occupancy_rate
 FROM wards;

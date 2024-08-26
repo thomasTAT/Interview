@@ -35,20 +35,23 @@ class player(object):
         self.jumpCount = 0
         self.runCount = 0
         self.slideUp = False
-
+    
     def draw(self, win):
+        
         if self.jumping:
-
-            self.y -= self.jumpList[self.jumpCount] * 1.2
-            win.blit(self.jump[self.jumpCount//18], (self.x,self.y))
-            self.jumpCount += 1
-
+            
+            
             if self.jumpCount > 108:
                 self.jumpCount = 0
                 self.jumping = False
                 self.runCount = 0
+                
+            self.y -= self.jumpList[self.jumpCount] * 1.2
+            win.blit(self.jump[self.jumpCount//16], (self.x,self.y))
+            self.jumpCount += 1
 
-        # sliding 和 slide up
+
+        
         elif self.sliding or self.slideUp:
 
             if self.slideCount < 20:
@@ -69,28 +72,27 @@ class player(object):
             # 請參考滑行 list
             win.blit(self.slide[self.slideCount//10], (self.x,self.y))
             self.slideCount += 1
-
-        # 普通跑步    
+            
         else:
             if self.runCount > 42:
                 self.runCount = 0
 
             win.blit(self.run[self.runCount//6], (self.x,self.y))
             self.runCount += 1
+        
+
 
 def redrawWindow():
     win.blit(bg, (bgX, 0))  # draws our first bg image
-    win.blit(bg, (bgX2, 0))  # draws the seconf bg image
+    win.blit(bg, (bgX2, 0))  # draws the seconf bg image'
     runner.draw(win)
     pygame.display.update()  # updates the screen
-
-# Call this from the game loop!
 
 run = True
 speed = 30  # NEW
 
-# 這段代碼的作用是每隔 0.5 秒觸發一次指定的事件
-pygame.time.set_timer(USEREVENT+1, 500) # Sets the timer for 0.5 seconds
+# 每隔 0.5 秒触发 一个叫做 USEREVENT+1 的事件
+pygame.time.set_timer(USEREVENT+1, 500) 
 
 runner = player(200, 313, 64, 64)
 
@@ -114,12 +116,14 @@ while run:
             pygame.quit() 
             quit()
 
-        # 每半秒增加一次速度
+            # 每半秒增加一次速度
         if event.type == USEREVENT+1: # Checks if timer goes off
             speed += 1 # Increases speed
     
+    
 
-    keys = pygame.key.get_pressed()
+
+    keys = pygame.key.get_pressed() 
 
     if keys[pygame.K_SPACE] or keys[pygame.K_UP]: # If user hits space or up arrow key
         if not(runner.jumping):  # If we are not already jumping
@@ -128,7 +132,8 @@ while run:
     if keys[pygame.K_DOWN]:  # If user hits down arrow key
         if not(runner.sliding):  # If we are not already sliding
             runner.sliding = True
+            
+
 
     clock.tick(speed) 
     redrawWindow()
-

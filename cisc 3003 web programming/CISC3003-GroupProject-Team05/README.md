@@ -8,7 +8,7 @@
 <img src="show case/header.png" height= 150px>
 
 
-**導航欄**: 利用 media query 做了個 Hamburger Menu，當窗口縮小，make appointment 會消失。窗口再繼續消失，nav 就會被隱藏，需要點擊三行才可以展開。 實現方法是利用了 `position`，把 nav 移動到下方，在用 polygon 將其隱藏。點擊 polygon 設置將 nav 顯示。利用 `flex-flow`
+**導航欄**: 利用 media query 做了個 Hamburger Menu，當窗口縮小，make appointment 會消失。窗口再繼續消失，nav 就會被隱藏，需要點擊三行才可以展開。 實現方法是利用了 `position`，把 nav 移動到下方，在用 polygon 將其隱藏。點擊 polygon 設置將 nav 顯示。
 
 <div style="display: flex; gap: 100px;">
   <img src="show case/hamburger 1.png" height="150px">
