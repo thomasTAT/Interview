@@ -1,6 +1,8 @@
 # Abstract
 使用了 bootstrap，grid，media query，去完成這個前端靜態網頁，實現響應式。
 
+<img src="show case/website.png" height=300px>
+
 ## index 頁面
 
 **Header**: 使用了 bootstrap fix top ，讓他永遠置頂。hearer 使用了 bootstrap 的 `.container` 和 `.row`，實現 responsive css。`.row` 是一個 flex box，可以用 `align-items` 和 `justify` 對 `.row` 裡面的 box 進行排版。
